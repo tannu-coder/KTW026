@@ -1,0 +1,679 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title></title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap&#39;');
+.main-container{
+    position: relative;
+    width: 90%;
+}
+
+.static-container{
+    display: inline-block;
+    margin: 20px;
+    font-style: italic;
+    font-size: 500px;
+    width: 600px;
+   
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background-size: 300%;
+   
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+   
+    animation: color 3s infinite alternate ease-in;
+}
+.static{
+    font-size: 150px;
+}
+
+
+.moving-text-container{
+    display: inline-block;
+    height: 57px;
+    width: 500px;
+    backface-visibility: hidden;
+   
+    font-size: 37px;
+    color: darkblue;
+   
+    position: absolute;
+    top: 130px;
+   
+    overflow: hidden;
+}
+
+.moving-text-container  p{
+    padding: 0;
+    margin: 0px;
+}
+
+.moving-text{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: 3px;
+    position: absolute;
+    animation: upDown 5s infinite;
+}
+
+@keyframes upDown{
+   
+    0% {
+       top: 5px;
+    }
+   
+    10%{
+        top: 5px;
+    }
+   
+    20%{
+        top: -50px;
+    }
+   
+    30%{
+        top: -50px;
+    }
+   
+    40%{
+        top: -105px;
+    }
+   
+    50%{
+        top: -105px;
+    }
+   
+     60%{
+        top: -160px;
+    }
+   
+    70%{
+        top: -160px;
+    }
+   
+    80%{
+        top: 30px;
+    }
+   
+    85% {
+        top: 5px;
+    }
+   
+    100% {
+        top: 5px;
+    }
+   
+}
+
+@keyframes color{
+   
+    0% {
+        background-position: left;
+    }
+   
+    100% {
+        background-position: right;
+    }
+}  
+     #top{  
+     }
+     .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 10px;
+}
+li{
+    margin: 40px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/*------Skill------*/
+.skill-mf span {
+  color: #4e4e4e;
+}
+
+.skill-mf .progress {
+  background-color: #cde1f8;
+  margin: 0.5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: 0.7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: 0.7rem;
+  background-color: #0078ff;
+}
+
+
+/*-----Resume------*/
+
+
+.resume .resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #050d18;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #1f5297;
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  background: #e4edf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #1f5297;
+}
+.bg{
+    height: 80vh;
+}
+
+.side .side-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #050d18;
+}
+
+.side.-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #1f5297;
+  position: relative;
+}
+
+.side.side-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+  margin-bottom: 10px;
+}
+
+.side .side-item h5 {
+  font-size: 16px;
+  background: #e4edf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.side .side-item ul {
+  padding-left: 20px;
+}
+
+.side.side-item ul li {
+  padding-bottom: 10px;
+}
+
+.side .side-item:last-child {
+  padding-bottom: 0;
+}
+
+.side.resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #fff;
+  border: 2px solid #1f5297;
+}
+big{background: papayawhip;
+        height: 520px;
+        width: 350px;
+        position: absolute;
+        /*top:35px;
+        left:550px;*/
+        padding: 40px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius:20px ;
+    }
+    input{
+        
+        border: none;
+        border-bottom: 2px solid red;
+    }
+    button{
+         background-image:
+         linear-gradient( pink,purple);
+         border-radius: 50px;
+         font-size: 20px;
+         border: none;
+         color: white;
+         padding: 10px 40px;
+         margin-top: 20pxpx;
+    }
+    a{ 
+     padding: 10px 60px;
+     color: black; 
+     text-decoration: none;
+    }
+    input{ 
+        
+        border-radius: 50px;
+    }
+    i{
+        font-size: 30px;
+    }
+    footer a{
+        padding: 5px;
+        font-size: 30px;
+    }
+    footer a:hover{
+        background: black;
+        color: red;
+        border-radius: 50%;
+        border: 2px solid white;
+    }
+    #footer{
+        color: white;
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="bg" style="background-image: url('https://img.freepik.com/free-vector/blue-pink-halftone-background_53876-99004.jpg?w=2000;')">
+<div id="mySidenav" class="sidenav">
+   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
+   <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#portfolio">protfolio</a>
+  <a href="#resume">Resume</a>
+  <a href="#contact">Contact</a>
+</div>
+<span style="font-size:30px; position: fixed;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+
+<!-- ====animation==== -->
+
+
+
+    <div class="container" id="top">
+        <div class="row">
+            <div class="col-md-12">
+<div class = 'main-container '>
+    <div class = 'static-container'>
+        <h1 class = 'static'> Hi, I am </h1>
+    </div>
+   
+    <div class = 'moving-text-container'>
+        <div class = 'moving-text'>
+            <p> Rishav Raj.</p>
+            <p> a devloper.</p>
+            <p> a coder. </p>
+            <p> learning web. </p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!-- ======About===== -->
+
+
+<div class="container shadow mt-5 bg-secondary" >
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8" id="about">
+<h2 style="text-align: center;">About</h2>
+<p style="text-align: center; margin: 25px;"><i>hii! i am Rishav Raj a web devloper,start my coding journey form a summer internship in Khabai tech.Currently doing Diploma in computer science from a Govt. Polytechnic Patna-7. Making web pages and portfolio by the use of css and javascript.</i></p>
+</div></div>
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="rish.jpg"   height="420px" width="80%" >
+                <div class="skill-mf">
+                    <br>
+                    <p class="title-s"><b>Skill</b></p>
+                    <span>HTML</span> <span class="pull-right">90%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>CSS</span> <span class="pull-right">85%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>BOOTSTRAp</span> <span class="pull-right">80%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span>JAVASCRIPT</span> <span class="pull-right">20%</span>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+              </div>
+
+             <div class="col-md-6">
+                <h3 style="color: powderblue;">About My Carrier</h3><br>
+                <p>hey! Do you really wanna know what am I</p>
+                <table>
+                    <tr>
+                        <td>
+                            <ul type="">
+                            <li> Birthday: 05-10-2003</li>
+                            <li> Age: 19</li> 
+                            <li> City: Gaya</li>
+                            <li> phn: +91 8252052214</li>
+                        </ul>
+                        </td>
+                        <td>
+                            <!-- using angular bracket sign by &gt; -->
+                             <ul type="">
+                            <li> Email: rishavraaj110@gmail.com</li>
+                            <li> Courses: html; css; javascript</li> 
+                            <li> Degree: diploma in computer science</li>
+                            <li> Master in: Web devlopment</li>
+                        </ul>
+                        </td>
+                    </tr>
+                </table>
+            <div class="col-md-12 text-center">
+            <p><b>So guys you know about me,In short brief I describe myself to you
+            Hii I am Rishav Raj from Gaya, learning web devlopment and doing polytecnic in computer science.</p> 
+            </div>
+        </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- ======Portfolio===== -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" id="portfolio">
+    <h1 style="text-align: center;">Portfolio</h1><br>
+    <p style="text-align: center;""margin: 100px;"><i>There are some of my projects while learning Web devlopment.This projects are made up with "HTML"; "Css"; "Bootstrap"; "JavaScript".</i></p><br><br>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col-md-4">
+          <div class="card shadow-sm">
+           <a href="project1.html"><img src="rr1.jpg" width="100%"></a>
+            <div class="card-body">
+              <p class="card-text">This is a web page about the coding journey and the diffrenat programing</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <a href="project1.html">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+              </a>
+                </div>
+            
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+         <div class="col-md-4">
+          <div class="card shadow-sm">
+           <a href="project2.html"><img src="rr2.jpg" height="100%" width="100%"></a>
+            <div class="card-body">
+             <p class="card-text">This is sign up form made with html and css</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                    <a href="project2.html">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  </a>
+                 </div>
+            
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+         <div class="col-md-4" >
+          <div class="card shadow-sm">
+           <a href="project3.html"><img src="rr3.jpg" width="100%" ></a>
+            <div class="card-body">
+             <p class="card-text">This is car animation made with the use of Html ,css ,and some js </p>
+              <div class="d-flex justify-content-between align-items-center">
+               <div class="btn-group">
+              <a href="project3.html">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  </a>
+              </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-md-4">
+          <div class="card shadow-sm">
+           <a href="project4.html"><img src="rr4.jpg"  width="100%"></a>
+            <div class="card-body">
+              <p class="card-text">This is web page about travel blogs and importance of traveling</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <a href="project4.html">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  </a>  
+                  
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+         <div class="col-md-4">
+          <div class="card shadow-sm">
+          <a href=https://mela-babu.tabhishek.repl.co/><img src="rr5.jpg" width="100%"></a>
+            <div class="card-body">
+              <p class="card-text">This is our first team project done with diffrent languges and ideas.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                 <a href=https://mela-babu.tabhishek.repl.co/>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+              </a> 
+  
+                  
+                </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+            </div>
+        </div><br><br><br>
+    </div>
+
+
+        <!-- =====Resume===== -->
+
+
+     <section id="resume" class="resume">
+      <div class="container shadow bg-primary">
+
+        <div class="section-title">
+         <h2 style="text-align: center;"><b>Resume</h2>
+          </div> 
+
+           <br><br>
+
+        <div class="row">
+          <div class="col-md-6" data-aos="fade-up">
+            <h3 class="resume-title">Summary</h3>
+             <div class="resume-item pb-0">
+              <h4>RISHAV RAJ</h4>
+               <p><em>A Web Developer and have great intrest in programming ,also enjoying to join techfest in the localities. </em></p>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+             <div class="resume-item">
+              <h4>Computer Science & Engineering</h4>
+               <h5>2022 - Present </h5>
+                <p><em>Government Polytechnic Gulzarbagh, Patna, Bihar</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>Intermediate in Science</h4>
+              <h5>2021 - 2022</h5>
+              <p><em>Inter College Bhimpura, Dist- Jehanabad.</em></p>
+              <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p> -->
+            </div>
+            <div class="resume-item">
+              <h4>Matriculation</h4>
+              <h5>2019 - 2020</h5>
+              <p><em>D.A.V Public school Cantt Area Gaya, Bihar.</em></p>
+            </div>
+          </div>
+    <div class="col-md-6">
+         <section id="side" class="side">
+      <div class="container">
+
+        <div class="section-title">
+         <h2><b>Intrest</h2>
+          </div> 
+
+            <h3 class="resume-title">Web Devlopment</h3>
+             <div class="resume-item">
+              <h4>Start my coding journey during a summer internship in Khabai Tech, in this session we learn about basic coding lessons which further helps on various me on various projects.</h4>
+               <h5>15dec-21 to 15jan-22 </h5>
+                <p><em>Khabai Tech, Hajipur, Bihar</em></p>
+            </div>
+            
+
+    </section>
+</div>
+</div>
+</div>
+
+<br>
+<br>
+<!-- Contact -->
+
+<footer style="background-image: url('https://wallpapercave.com/wp/wp3202170.jpg')">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" id="contact">
+            <h1 style="text-align: center;"><b>Contact Us</b></h1>
+      </div>
+      <div class="col-md-12 text-center">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe4Xz6yWSNjbDZ4mzoUcV5YTaaZQlDrthsHZokn0r1TYPdy2Q/viewform?embedded=true" width="100%" height="400px" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 text-center" id="footer">
+      Designed by <a href="#" style="color:yellow"> Rishav Raj</a>
+      <p>Mentored by <a href="https://khabaitech.com/"> <img src="https://khabaitech.com/login/assets/frontend/frontend/images/logo.png" height="30px"> </a>.
+      </p>
+    </div>
+    <div class="col-md-6 text-center">
+      <a href="https://www.facebook.com/profile.php?id=100054841250229&mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.linkedin.com/in/rishav-raj-78b89625a"><i class="fa fa-linkedin"></i></a>
+      <a href="https://instagram.com/rishabhsharma5091"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+</footer>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "200px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</body>
+</html>

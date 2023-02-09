@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh"content="infinite">
+    <title>animation</title>
+    <style>
+                 
+        div{ text-align:center;
+            height:100px;
+            width:100px;
+            background :yellow; 
+            position: absolute;  
+           animation: rishav 1s infinite;  
+           border-radius:100%; 
+           margin:10px; 
+           font-size:40px;                                                                                                                     
+        } 
+        @keyframes rishav {0%{top:0px; bottom:0px;}
+        50%{top:500px; bottom:500px;}
+        100%{top:0px; bottom:0px;}}
+       
+        #one
+       {top:2%;
+        left:20%; 
+        animation:rishav 2s infinite;                        
+        background: linear-gradient(red,pink);                                                                                                                                                           
+        }
+        #two
+        {top:2%;
+        left:30%;
+        animation:rishav 2.5s infinite;
+        background:linear-gradient(yellow,blue);                                                                                                                                                                
+        }
+        #three
+        {top:2%;
+        left:40%; 
+        animation: rishav 2s infinite;
+        background:linear-gradient (red);                                                                                                                                                            
+        }
+        #four
+        {top:2%;
+        left:50%;
+        animation:rishav 2.5s infinite;
+        background:linear-gradient(yellow,pink);                                                                                                                                         
+        }
+        #five
+        {top:2%;
+          left:60%;
+           animation:rishav 3s infinite;  background:linear-gradient(yellow,pink);                                                                                                                                              
+        }
+        #six
+        {top:2%;
+        left:70%; 
+         animation:rishav 2.5s infinite;
+        background:linear-gradient(red,pink); }
+                                                                                                                                   
+        body{background:url('https://media.istockphoto.com/id/537373196/photo/trees-forming-a-heart.webp?s=612x612&w=is&k=20&c=lQnjr7If0ta5NvEO1HkzCwpD0RpsjzQARNGq3JF9QLo='); 
+        background-repeat:no-repeat;
+        background-size:100%;}
+                                                                                        
+    </style>
+</head>
+<body>
+      
+    <center>
+    <div id="one" class="box"> R </div>
+    <div id="two" class="box">  I </div>
+    <div id="three" class="box">S </div>  
+    <div id="four" class="box"> H</div>  
+    <div id="five" class="box"> A</div>
+    <div id="six" class="box"> V </div>
+         </center>
+     
+</body>
+</html>
